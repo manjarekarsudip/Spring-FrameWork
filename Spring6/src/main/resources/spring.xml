@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="e" class="com.velocity.Employee" dependency-check="all">
+		<property name="fullName" value="Sudip"></property>
+		<property name="address" ref="a"></property>
+	</bean>
+	<bean id="a" class="com.velocity.Address">
+		<property name="addressArea" value="M G Road"></property>
+	</bean>
+</beans>
